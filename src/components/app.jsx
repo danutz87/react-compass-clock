@@ -52,7 +52,6 @@ class App extends Component {
               <span>
                 {this.state.year}
               </span>
-               / Year
             </div>
           </div>
           <div className="M_month">
@@ -61,7 +60,7 @@ class App extends Component {
           <div className="box">
             {this.array(12).map((x, index) => {
               return (
-                <div key={index} className={`month item ${index===(this.state.month-1)?"active":""}`} style={{transform: `rotate(${index*30-30*(this.state.month-1)}deg)`}}>
+                <div key={index} className={`month item ${index === (this.state.month - 1) ? "active" : ""}`} style={{ transform: `rotate(${index * 30 - 30 * (this.state.month - 1)}deg)` }}>
                   {`month ${x}`}
                 </div>
               );
@@ -69,7 +68,7 @@ class App extends Component {
 
             {this.array(30).map((x, index) => {
               return (
-                <div key={index} className={`day item ${index===(this.state.day-1)?"active":""}`} style={{transform: `rotate(${index*12-12*(this.state.day-1)}deg)`}}>
+                <div key={index} className={`day item ${index === (this.state.day - 1) ? "active" : ""}`} style={{ transform: `rotate(${index * 12 - 12 * (this.state.day - 1)}deg)` }}>
                   {`day ${x}`}
                 </div>
               );
@@ -79,7 +78,8 @@ class App extends Component {
               return (
                 <div key={index}
                   className={`week item ${index === (this.state.week - 1) ? "active" : ""}`}
-                  style={{ transform: `rotate(${index * (360 / 21) - (360 / 21) * (this.state.week - 1)}deg)` }}>
+                  style={{ transform: `rotate(${index * (360 / 21) - (360 / 21) * (this.state.week - 1)}deg)` }}
+                >
                   {`week ${x}`}
                 </div>
               );
@@ -88,8 +88,9 @@ class App extends Component {
             {this.array(24).map((x, index) => {
               return (
                 <div key={index}
-                  className={`hour item ${index === (this.state.hour-1) ? "active" : ""}`}
-                  style={{ transform: `rotate(${index * (360 / 24) - (360 / 24) * (this.state.hour - 1)}deg)` }}>
+                  className={`hour item ${index === (this.state.hour - 1) ? "active" : ""}`}
+                  style={{ transform: `rotate(${index * (360 / 24) - (360 / 24) * (this.state.hour - 1)}deg)` }}
+                >
                   {`${x} hr`}
                 </div>
               );
@@ -99,7 +100,8 @@ class App extends Component {
               return (
                 <div key={index}
                   className={`Minute item ${index === (this.state.Minute - 1) ? "active" : ""}`}
-                  style={{ transform: `rotate(${index * (360 / 60) - (360 / 60) * (this.state.Minute - 1)}deg)` }}>
+                  style={{ transform: `rotate(${index * (360 / 60) - (360 / 60) * (this.state.Minute - 1)}deg)` }}
+                >
                   {`${x} min`}
                 </div>
               );
@@ -109,7 +111,8 @@ class App extends Component {
               return (
                 <div key={index}
                   className={`second item ${index === (this.state.second - 1) ? "active" : ""}`}
-                  style={{ transform: `rotate(${index * (360 / 60) - (360 / 60) * (this.state.second - 1)}deg)` }}>
+                  style={{ transform: `rotate(${index * (360 / 60) - (360 / 60) * (this.state.second - 1)}deg)` }}
+                >
                   {`${x} sec`}
                 </div>
               );
