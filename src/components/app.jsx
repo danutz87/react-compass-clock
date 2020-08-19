@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './App.css';
 
 class App extends Component {
   constructor() {
@@ -61,7 +62,7 @@ class App extends Component {
             {this.array(12).map((x, index) => {
               return (
                 <div key={index} className={`month item ${index===(this.state.month-1)?"active":""}`} style={{transform: `rotate(${index*30-30*(this.state.month-1)}deg)`}}>
-                  {`${x} month`}
+                  {`month ${x}`}
                 </div>
               );
             })}
@@ -69,7 +70,7 @@ class App extends Component {
             {this.array(30).map((x, index) => {
               return (
                 <div key={index} className={`day item ${index===(this.state.day-1)?"active":""}`} style={{transform: `rotate(${index*12-12*(this.state.day-1)}deg)`}}>
-                  {`${x} day`}
+                  {`day ${x}`}
                 </div>
               );
             })}
@@ -87,7 +88,7 @@ class App extends Component {
             {this.array(24).map((x, index) => {
               return (
                 <div key={index}
-                  className={`hour item ${index === (this.state.hour-1)?"active" : ""}`}
+                  className={`hour item ${index === (this.state.hour-1) ? "active" : ""}`}
                   style={{ transform: `rotate(${index * (360 / 24) - (360 / 24) * (this.state.hour - 1)}deg)` }}>
                   {`${x} hr`}
                 </div>
